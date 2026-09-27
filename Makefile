@@ -31,7 +31,7 @@ test:
 
 local_deploy:
 	docker build --build-arg MODEL_VERSION=$(model_version) -t predicting-transportation-costs .
-	docker run --rm -p 8000:8000 predicting-transportation-costs
+	docker run --rm --env-file .env -p 8000:8000 predicting-transportation-costs
 
 publish_model:
 	$(PYTHON) src/challenge_spotter/publish_model.py
