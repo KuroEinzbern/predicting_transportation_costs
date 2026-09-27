@@ -1,10 +1,8 @@
 -include .env
 
 ifeq ($(OS),Windows_NT)
-    SHELL := bash.exe
     PYTHON := venv/Scripts/python
 else
-    SHELL := bash
     PYTHON := venv/bin/python
 endif
 
