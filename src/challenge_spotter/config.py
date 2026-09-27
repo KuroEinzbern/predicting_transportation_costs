@@ -15,3 +15,6 @@ MODEL_DIR= PROJECT_ROOT / "models/"
 
 MODEL_VERSION = os.getenv("MODEL_VERSION", "1.0")
 MODEL_PATH = MODEL_DIR / f"model_{MODEL_VERSION}"
+
+MODEL_DIR.mkdir(exist_ok=True)
+DATA_DIR.mkdir(exist_ok=True)
