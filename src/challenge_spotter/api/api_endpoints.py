@@ -5,6 +5,8 @@ from contextlib import asynccontextmanager
 from challenge_spotter.api.schema_validation import PredictionRequest, PredictionResponse
 from challenge_spotter import config as cfg
 import os
+from dotenv import load_dotenv
+
 
 
 pipeline = None
@@ -13,6 +15,7 @@ pipeline = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global pipeline
+    load_dotenv()   
     model_version = os.getenv("model_version", 1.0)
     pipeline = joblib.load(cfg.MODEL_DIR / f"model_{model_version}")
     yield 
