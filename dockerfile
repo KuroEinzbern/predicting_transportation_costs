@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN mkdir -p models && \
-    curl -L "https://huggingface.co/KuroEinzbern/transportation_cost/resolve/main/model_{MODEL_VERSION}?download=true" -o models/model_{MODEL_VERSION}
+    curl -L "https://huggingface.co/KuroEinzbern/transportation_cost/resolve/main/model_${MODEL_VERSION}?download=true" -o models/model_${MODEL_VERSION}
 
 
 COPY . .
