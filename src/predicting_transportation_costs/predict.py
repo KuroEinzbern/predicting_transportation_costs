@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-from challenge_spotter import config as cfg
-from challenge_spotter.auxiliars import prepare_data,get_final_pipeline
+from predicting_transportation_costs import config as cfg
+from predicting_transportation_costs.auxiliars import prepare_data,get_final_pipeline
 import joblib
 
 

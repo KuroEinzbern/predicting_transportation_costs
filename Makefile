@@ -14,16 +14,16 @@ install:
 	$(PYTHON) -m pip install -r models_requirements.txt
 
 download_datasets:
-	$(PYTHON) src/challenge_spotter/download_data.py
+	$(PYTHON) src/predicting_transportation_costs/download_data.py
 
 data:
-	$(PYTHON) src/challenge_spotter/make_data.py
+	$(PYTHON) src/predicting_transportation_costs/make_data.py
 
 train:
-	$(PYTHON) src/challenge_spotter/train.py
+	$(PYTHON) src/predicting_transportation_costs/train.py
 
 predict_validation:
-	$(PYTHON) src/challenge_spotter/predict.py
+	$(PYTHON) src/predicting_transportation_costs/predict.py
 
 test: 
 	$(PYTHON) -m pytest tests/
@@ -34,4 +34,4 @@ local_deploy:
 	docker run --rm --env-file .env -p 8000:8000 predicting-transportation-costs
 
 publish_model:
-	$(PYTHON) src/challenge_spotter/publish_model.py
+	$(PYTHON) src/predicting_transportation_costs/publish_model.py

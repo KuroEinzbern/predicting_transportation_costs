@@ -1,6 +1,6 @@
 import os
 from huggingface_hub import HfApi
-import challenge_spotter.config as cfg
+import predicting_transportation_costs.config as cfg
 from dotenv import load_dotenv
 
 load_dotenv()

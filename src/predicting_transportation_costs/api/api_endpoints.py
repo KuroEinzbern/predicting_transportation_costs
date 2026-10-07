@@ -2,8 +2,8 @@ from fastapi import FastAPI
 import joblib
 import pandas as pd
 from contextlib import asynccontextmanager
-from challenge_spotter.api.schema_validation import PredictionRequest, PredictionResponse
-from challenge_spotter import config as cfg
+from predicting_transportation_costs.api.schema_validation import PredictionRequest, PredictionResponse
+from predicting_transportation_costs import config as cfg
 import os
 from dotenv import load_dotenv
 

@@ -20,4 +20,4 @@ COPY . .
 RUN pip install --no-cache-dir .
 
 EXPOSE 8000
-CMD ["uvicorn", "challenge_spotter.api.api_endpoints:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+CMD ["uvicorn", "predicting_transportation_costs.api.api_endpoints:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]

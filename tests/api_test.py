@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 import pytest
-from challenge_spotter.api import api_endpoints
+from predicting_transportation_costs.api import api_endpoints
 
 
 client = TestClient(api_endpoints.app)

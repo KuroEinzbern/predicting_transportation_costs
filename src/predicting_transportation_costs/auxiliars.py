@@ -10,9 +10,9 @@ from sklearn.model_selection import TimeSeriesSplit, cross_val_score
 from sklearn.cluster import KMeans
 from lightgbm import LGBMRegressor
 from xgboost import XGBRegressor
-from challenge_spotter.pipeline_steeps import feature_engineering
-from challenge_spotter.pipeline_steeps import cleaning
-from challenge_spotter import config as cfg
+from predicting_transportation_costs.pipeline_steeps import feature_engineering
+from predicting_transportation_costs.pipeline_steeps import cleaning
+from predicting_transportation_costs import config as cfg
 import yaml
 from sklearn.linear_model import Ridge
 import numpy as np
@@ -81,6 +81,8 @@ def get_xgb_baseline() -> XGBRegressor:
     n_estimators=300,
     learning_rate=0.05,
     max_depth=6,
+    objective='reg:absoluteerror', 
+    eval_metric='mae',
     min_child_weight=30,       
     subsample=0.8,            
     colsample_bytree=0.8,     
@@ -94,6 +96,7 @@ def get_lgbm_baseline() -> LGBMRegressor:
     lgbm_model = LGBMRegressor(
     n_estimators=300,
     learning_rate=0.05,
+    objective='regression_l1',
     max_depth=6,
     num_leaves=31,            
     min_child_samples=20,     

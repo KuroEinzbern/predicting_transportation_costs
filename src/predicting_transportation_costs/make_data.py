@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from challenge_spotter import config as cfg
+from predicting_transportation_costs import config as cfg
 
 def main() :
     df = pd.read_csv(cfg.DATA_DIR / "train-test.csv")

@@ -1,6 +1,6 @@
 import pandas as pd
-import challenge_spotter.config as cfg
-import challenge_spotter.auxiliars as aux
+import predicting_transportation_costs.config as cfg
+import predicting_transportation_costs.auxiliars as aux
 import joblib
 from sklearn.metrics import mean_absolute_error
 

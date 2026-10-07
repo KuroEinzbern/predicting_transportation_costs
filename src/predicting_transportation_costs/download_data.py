@@ -1,5 +1,5 @@
 import requests
-from challenge_spotter import config as cfg
+from predicting_transportation_costs import config as cfg
 from huggingface_hub import hf_hub_download
 
 def main() -> None:

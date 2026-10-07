@@ -1,5 +1,5 @@
 import pandas as pd
-import challenge_spotter.config as cfg
+import predicting_transportation_costs.config as cfg
 
 
 def test_training_data_contains_expected_columns():

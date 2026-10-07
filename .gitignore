@@ -7,3 +7,4 @@ models/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+predicting_transportation_costs.egg-info
