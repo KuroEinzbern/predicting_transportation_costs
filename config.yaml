@@ -1,42 +1,24 @@
-model_version: "v1.0.0"
-
-
+model_version: v1.0.1
 features:
-
   numeric:
-    - pickup_lat
-    - pickup_lon
-    - delivery_lat
-    - delivery_lon
-    - weight
-    - market_index
-    - quote_signal
-    - index_x_distance
-    - distance_x_weight
-    #- index_x_signal
-    #- distance_long_haul
-    #- risk_of_high_cost
-
+  - pickup_lat
+  - pickup_lon
+  - delivery_lat
+  - delivery_lon
+  - weight
+  - market_index
+  - quote_signal
+  - index_x_distance
+  - distance_x_weight
   categorical:
-    - zone_clouster_pickup
-    - zone_clouster_delivery
-    - route
-    - pickup
-    - delivery
-    - equipment
-    - day_of_week
-    - month
-    
-  
-  boolean: 
-    - weight_is_missing
-    - is_weekend
-
-
-#baseline
-model: "Ridge"
-scale_features: true
-target_transform: false
-metrics:
-  mae_cv_mean: 145.47
-  rmse_cv_mean: 590.45
+  - zone_clouster_pickup
+  - zone_clouster_delivery
+  - route
+  - pickup
+  - delivery
+  - equipment
+  - day_of_week
+  - month
+  boolean:
+  - weight_is_missing
+  - is_weekend
